@@ -1,6 +1,6 @@
 clear
 clc
-close all
+% close all
 
 % load data_files/svm_results_sc
 % load data_files/svm_results_pfc
