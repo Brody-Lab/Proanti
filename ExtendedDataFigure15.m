@@ -1,8 +1,9 @@
-function [ ] = Duan_NN_EDF15( opto_table, YFP_table)
+function [ ] = ExtendedDataFigure15( opto_table, YFP_table)
 % DUAN_NN_EDF5 Summary of this function goes here
 %   This function takes bilateral SC optogenetic inactivaiton data and YFP
 %   control data as input and conduct analysis/plotting for EDF 15
 %   First load opto_table and YFP_table
+%   Then run ExtendedDataFigure15(opto_table,YFP_table)
 
 % opto(YFP)_table contains, for each trial:
 %   Rat                  the rat who did that trial;

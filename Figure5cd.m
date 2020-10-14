@@ -1,8 +1,9 @@
-function [  ] = Duan_NN_Fig5( opto_table )
+function [  ] = Figure5cd( opto_table )
 % DUAN_NN_FIG5 Summary of this function goes here
 %   This function takes bilateral SC optogenetic inactivaiton data as input
 %   and conducts statistical anlaysis for plots in Fig. 5 in Duan_2020
 %   First load opto_table
+%   Then run Figure5cd(opto_table)
 
 % opto_table contains, for each trial:
 %   Rat                  the rat who did that trial;
