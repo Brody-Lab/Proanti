@@ -5,7 +5,8 @@ clc
 load ../data_files/cid_sc
 CD_sc=get_celldata(cid_sc);
 SD_sc=get_sessdata(CD_sc.sessid);
-save ../data_files/data_sc cid_sc CD_sc SD_sc
+SD_sc_tracking = get_sessdata(CD_sc.sessid,'do_tracking',true);
+save ../data_files/data_sc cid_sc CD_sc SD_sc SD_sc_tracking
 
 
 load ../data_files/cid_pfc
