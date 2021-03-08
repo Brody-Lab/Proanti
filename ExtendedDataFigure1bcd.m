@@ -127,9 +127,10 @@ function [  ] = ExtendedDataFigure1bcd( EDF1_data )
     diff_Ph_Ah = A_h_RT_all - P_h_RT_all; %Correct Anti -correct Pro
     errorbar(ax2,0.5,1000*nanmean(diff_Ph_Ah),1000*nanstderr(diff_Ph_Ah),'Marker','none','LineWidth',1,'Color','k','LineStyle','none');
     bar(ax2,0.5,1000*nanmean(diff_Ph_Ah),'BarWidth',0.3,'FaceColor',[1 1 1],'LineWidth',1);
+    plot(ax2,0.6,1000*diff_Ph_Ah,'.','Color',[0.5 0.5 0.5]);
     set(ax2,'XTick',0.5,'XTickLabel',{'hits(A-P)'},'TickDir','out','TickLength',[0.01 0.01]);
     set(ax2,'Xlim',[0.2 0.8]);
-    set(ax2,'Ylim',[-65 80]);
+    set(ax2,'Ylim',[-20 200]);
     ylabel(ax2,'\Delta RT (ms)');    
     title(ax2,'Anti - Pro');
     
@@ -141,9 +142,11 @@ function [  ] = ExtendedDataFigure1bcd( EDF1_data )
     errorbar(ax3,[0.3 0.7],1000*[nanmean(diff_Ph_Pe) nanmean(diff_Ah_Ae)],1000*[nanstderr(diff_Ph_Pe) nanstderr(diff_Ah_Ae)],'Marker','none','LineWidth',1,'Color','k','LineStyle','none');
     bar(ax3,0.3,1000*nanmean(diff_Ph_Pe),'BarWidth',0.3,'FaceColor',pro_color,'LineWidth',1);
     bar(ax3,0.7,1000*nanmean(diff_Ah_Ae),'BarWidth',0.3,'FaceColor',anti_color,'LineWidth',1);
+    plot(ax3,0.2,1000*diff_Ph_Pe,'.','Color',[0.5 0.5 0.5]);
+    plot(ax3,0.8,1000*diff_Ah_Ae,'.','Color',[0.5 0.5 0.5]);
     set(ax3,'XTick',[0.3 0.7],'XTickLabel',{'Pro','Anti'},'TickDir','out','TickLength',[0.01 0.01]);
     set(ax3,'Xlim',[0 1]);
-    set(ax3,'Ylim',[-65 80]);
+    set(ax3,'Ylim',[-170 130]);
     title(ax3,'hit - error');
 
     % performance mean (insert)
@@ -151,10 +154,12 @@ function [  ] = ExtendedDataFigure1bcd( EDF1_data )
     errorbar(ax4,[0.3 0.7],100*[nanmean(P_perf_all) nanmean(A_perf_all)],100*[nanstderr(P_perf_all) nanstderr(A_perf_all)],'Marker','none','LineWidth',1,'Color','k','LineStyle','none');
     bar(ax4,0.3,100*nanmean(P_perf_all),'BarWidth',0.2,'FaceColor',pro_color,'LineWidth',1);
     bar(ax4,0.7,100*nanmean(A_perf_all),'BarWidth',0.2,'FaceColor',anti_color,'LineWidth',1);
+    plot(ax4,0.25,100*P_perf_all,'.','Color',[0.5 0.5 0.5]);
+    plot(ax4,0.75,100*A_perf_all,'.','Color',[0.5 0.5 0.5]);
     set(ax4,'XTick',[0.3 0.7],'XTickLabel',{'Pro','Anti'},'TickDir','out','TickLength',[0.01 0.01]);
     set(ax4,'YTick',[65 70 75],'YTickLabel',{' ',' ','75'},'TickDir','out','TickLength',[0.01 0.01]);
     set(ax4,'Xlim',[0 1]);
-    set(ax4,'Ylim',[64 78]);
+    set(ax4,'Ylim',[65 81]);
     ylabel(ax4,'% correct');   
     
     % performance all rats
@@ -177,15 +182,17 @@ function [  ] = ExtendedDataFigure1bcd( EDF1_data )
     errorbar(ax6,[0.3 0.7],100*[nanmean(P_sw_all) nanmean(A_sw_all)],100*[nanstderr(P_sw_all) nanstderr(A_sw_all)],'Marker','none','LineWidth',1,'Color','k','LineStyle','none');
     bar(ax6,0.3,100*nanmean(P_sw_all),'BarWidth',0.25,'FaceColor',pro_color,'LineWidth',1);
     bar(ax6,0.7,100*nanmean(A_sw_all),'BarWidth',0.25,'FaceColor',anti_color,'LineWidth',1);
+    plot(ax6,0.25,100*P_sw_all,'.','Color',[0.5 0.5 0.5]);
+    plot(ax6,0.75,100*A_sw_all,'.','Color',[0.5 0.5 0.5]);
     set(ax6,'XTick',[0.3 0.7],'XTickLabel',{'A2P','P2A'},'TickDir','out','TickLength',[0.01 0.01]);
     set(ax6,'Xlim',[0 1]);
-    set(ax6,'Ylim',[-28 5]);
+    set(ax6,'Ylim',[-40 5]);
     ylabel(ax6,'switch - block trials (%)');
     title(ax6,'Switch cost');
     
     %%% Post-processing
     set([ax1 ax2 ax3 ax4 ax5 ax6],'Box','Off');
-    %keyboard;
+    keyboard;
     
 end
 
