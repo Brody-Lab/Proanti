@@ -1,4 +1,4 @@
-function [ ] = ExtendedDataFigure9c( video_PA_auc, video_PA_auc_p)
+function [ ] = SupplementaryFigure5c( video_PA_auc, video_PA_auc_p)
 % ExtendedDataFigure9c Summary of this function goes here
 %   This function takes processed video data and related statitics 
 %   input and plot it as EDF9c
