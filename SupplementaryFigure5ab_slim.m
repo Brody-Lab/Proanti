@@ -1,4 +1,4 @@
-function [video_PA_auc, video_PA_auc_p]=ExtendedDataFigure9ab_slim(video_processed)
+function [video_PA_auc, video_PA_auc_p]=SupplementaryFigure5ab_slim(video_processed)
 %   This function takes processed video data as input and analyze/plot
 %   video data for individual sessions, takes a long time;
 %   Load video_processed;
