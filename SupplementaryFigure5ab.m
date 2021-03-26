@@ -1,4 +1,4 @@
-function [video_PA_auc, video_PA_auc_p]=ExtendedDataFigure9ab(CD,SD,varargin)
+function [video_PA_auc, video_PA_auc_p]=SupplementaryFigure5ab(CD,SD,varargin)
 %   This function takes raw spike and video data as input and analyze/plot
 %   video data for individual sessions, takes a long time
 %   Load CD_sc and SD_sc_tracking
