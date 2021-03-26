@@ -5,7 +5,6 @@ close all
 load data_files/matsc
 load data_files/matpfc
 
-%%% code for Extended Data Figure 14b
 
 
 
