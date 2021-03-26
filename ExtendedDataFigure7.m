@@ -1,4 +1,4 @@
-function [ ] = ExtendedDataFigure16( opto_table, YFP_table)
+function [ ] = ExtendedDataFigure7( opto_table, YFP_table)
 % DUAN_NN_EDF5 Summary of this function goes here
 %   This function takes bilateral SC optogenetic inactivaiton data and YFP
 %   control data as input and conduct analysis/plotting for EDF 15
